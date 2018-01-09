@@ -1,0 +1,45 @@
+server:
+  port: ${port:8080}
+
+message: Hello World Nofitifaction Service !! Default Profile !!
+
+
+security:
+  user:
+    name:  admin
+    password: pass
+
+
+spring:
+  application:
+    name: aejuk
+  datasource:
+    url: jdbc:mysql://localhost:3306/aejuk
+    username: root
+    password: p45w0rd
+    driver-class-name: com.mysql.jdbc.Driver
+    dbcp: # Keep the connection alive if idle for a long time (needed in production)
+      test-while-idle: true
+      validation-query: SELECT 1
+  jpa:
+    show-sql: true # Show or not log for each sql query
+    hibernate:
+      ddl-auto: update # Hibernate ddl auto (create, create-drop, update)     
+      naming:
+        implicit-strategy:  org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    generate-ddl: true
+
+
+logging:
+  level:
+    co.uk.aejuk: debug
+    org.hibernate.type.descriptor.sql: trace
+    org.hibernate.sql: debug
+
+
+# Use spring.jpa.properties.* for Hibernate native properties (the prefix is
+# stripped before adding them to the entity manager)
+
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+ 
+<tiles-definitions>  
+  
+   <!-- Template Definition -->
+   <definition name="template-def"
+       template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/views/tiles/templates/defaultHeader.jsp" />  
+       <put-attribute name="sidebar" value="/WEB-INF/views/tiles/templates/defaultSidebar.jsp" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/views/tiles/templates/defaultFooter.jsp" />  
+   </definition>  
+  
+  
+   <!-- Login Page -->
+   <definition name="login" extends="template-def">  
+       <put-attribute name="title" value="Login" />  
+       <put-attribute name="sidebar" value="" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />  
+   </definition>  
+  
+   <!-- Main Page -->
+   <definition name="home" extends="template-def">  
+       <put-attribute name="title" value="Welcome" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/home.jsp" />  
+   </definition>  
+ 
+   <!-- Apache Tiles Page -->
+   <definition name="apachetiles" extends="template-def">  
+       <put-attribute name="title" value="ApacheTiles" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/apachetiles.jsp" />  
+   </definition>  
+       
+   <!-- Spring MVC Page -->
+   <definition name="springmvc" extends="template-def">  
+       <put-attribute name="title" value="SpringMVC" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/springmvc.jsp" />  
+   </definition>  
+   
+   
+   
+   <!-- List Members Page -->
+   <definition name="listMembers" extends="template-def">  
+       <put-attribute name="title" value="List Members" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/members/listMembers.jsp" />  
+   </definition>  
+  
+  
+   <!-- Member Page -->
+   <definition name="member" extends="template-def">  
+       <put-attribute name="title" value="Member Page" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/members/member.jsp" />  
+   </definition>  
+  
+  
+   <!-- Member Paymeent Page -->
+   <definition name="payment" extends="template-def">  
+       <put-attribute name="title" value="Member Payment Page" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/members/payment.jsp" />  
+   </definition>  
+   
+</tiles-definitions>
